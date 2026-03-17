@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Products</h1>
+
+  <!-- Cart Popup -->
+  <div id="cartPopup" onclick="goToCart()">
+    Cart: <span id="cartCount">0</span>
+  </div>
+
+  <div class="products">
+
+    <div class="card">
+      <h2>Shoes</h2>
+      <p>₹1000</p>
+      <button onclick="addToCart(1, 'Shoes', 1000)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h2>Watch</h2>
+      <p>₹1500</p>
+      <button onclick="addToCart(2, 'Watch', 1500)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h2>Bag</h2>
+      <p>₹800</p>
+      <button onclick="addToCart(3, 'Bag', 800)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h2>Headphones</h2>
+      <p>₹2000</p>
+      <button onclick="addToCart(4, 'Headphones', 2000)">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
