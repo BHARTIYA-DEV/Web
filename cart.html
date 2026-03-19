@@ -1,0 +1,50 @@
+<html>
+<body>
+<h1> Cart <h1>
+
+
+<div id="cartItems"> </div>
+
+<h2 id="total"> </h2>
+
+
+<script>
+
+let cart1 =  JSON.parse(sessionStorage.getItem("cart")) || [] ;
+
+let cartDiv = document.getElementById("cartItems");
+
+let total = 0; 
+
+if(cart1.length === 0) {
+  cartDiv.innerHTML = "<p>Cart is empty </p>";
+}else
+{  cartDiv.innerHTML = `<table>`;
+  cart1.forEach(item => {
+  
+  cartDiv.innerHTML += `<div>
+       <tr><td><h2>${item.name} </h2>  </td><td>
+	   <p>${item.price} </p> </td></tr>
+     </div>`;
+   
+  });
+   cartDiv.innerHTML += "</table>";
+}
+
+  let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+
+let total1 = 0;
+
+// loop through cart
+for(let i = 0; i < cart.length; i++) {
+  total1 = total1 + cart[i].price;
+}
+
+// show total
+document.getElementById("total").innerText = "Total: ₹" + total1;
+
+</script>
+
+
+</body>
+</html>
